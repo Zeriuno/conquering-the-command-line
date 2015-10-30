@@ -1,0 +1,18 @@
+$ pwd
+/home/$user
+$ cd
+$ cd ~
+$ pwd -P /*symlinks solved*/
+
+
+ls
+
+$ ls 
+$ ls ~/another/diretory
+$ ls -a ~/another/directory
+$ ls -l ~/another/directory /*long-form*/
+$ ls -h ~/another/directory /*-h human readable refers to the size format*/
+$ ls -S /*sort by file size*/
+$ ls -lt /*long-form, last time modified*/
+$ ls -r /*reverse sort*/
+
