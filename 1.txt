@@ -16,3 +16,9 @@ $ ls -S /*sort by file size*/
 $ ls -lt /*long-form, last time modified*/
 $ ls -r /*reverse sort*/
 
+
+1.4
+ln
+
+$ ln a.txt b.txt /*hard link, content of the copy is updated when the source is updated*/
+$ ln -f a.txt b.txt /*force a hard link, for instance when the destination file already exists*/
