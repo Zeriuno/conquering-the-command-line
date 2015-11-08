@@ -22,3 +22,6 @@ ln
 
 $ ln a.txt b.txt /*hard link, content of the copy is updated when the source is updated*/
 $ ln -f a.txt b.txt /*force a hard link, for instance when the destination file already exists*/
+
+/* Symbolic link: hard links do not work for directories, nor for files on other file systems */
+$ ln -s a.txt b.txt
