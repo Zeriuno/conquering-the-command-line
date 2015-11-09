@@ -26,3 +26,14 @@ $ ln -f a.txt b.txt /*force a hard link, for instance when the destination file 
 /* Symbolic link: hard links do not work for directories, nor for files on other file systems
 Hard Links have same timestamp, symbolic links don't, because they are a tiny file pointing to the original one*/
 $ ln -s a.txt b.txt
+
+1.5
+cd
+
+$ cd ~/Documents
+$ pwd
+$ cd ..
+$ cd
+
+1.6
+
