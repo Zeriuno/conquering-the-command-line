@@ -36,4 +36,21 @@ $ cd ..
 $ cd
 
 1.6
+mkdir
+
+$ mkdir foo
+$ mkdir -p new/folder/2
+$ mkdir -v again /* prints output*/
+
+1.7
+cp
+
+$ cp -R directory another_one /*copies directory and its content inside another_one */
+$ cp -R directory not_created /*creates new directory and copies content into it*/
+$ cp -f a.txt b.txt /*'-f' forces the rewrite; '-i' to have a prompt*/
+
+
+1.10
+.3
+< /*reading from a file*/
 
