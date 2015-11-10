@@ -1,0 +1,7 @@
+2
+ack/ag
+
+# apt-get install ack-grep silversearcher-ag
+# dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+
+$ ag DHH
