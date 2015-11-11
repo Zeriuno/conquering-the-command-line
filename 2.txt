@@ -5,3 +5,4 @@ ack/ag
 # dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
 $ ag DHH
+$ ag DHH guides/
