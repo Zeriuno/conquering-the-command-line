@@ -10,4 +10,6 @@ $ ag readme$ /*'readme' string at the end of a line (regex)*/
 $ ag .rb railties/CHANGELOG.md /*because of regex syntax, '.rb' searches for anything followed by 'rb'. Using -Q turns regex syntax off and looks for the exact query*/
 -l /*lists files containing the string*/
 -i /*switch the search to case insensitive mode*/
--G /*option requesting for a search of files containing the argument that follows -G*/
+-G /*option requesting for a search of files containing the argument that follows -G, supports regular expressions*/
+$ ag readme -li -G ec$ /*files ending in 'ec'*/
+--ignore-dir /*pass a directory to be ignored as argument*/
