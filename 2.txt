@@ -7,4 +7,7 @@ ack/ag
 $ ag DHH
 $ ag DHH guides/ /*restricts search tto specified path*/
 $ ag readme$ /*'readme' string at the end of a line (regex)*/
-$ ag .rb railties/CHANGELG.md /*because of regex syntax, '.rb' searches for anything followed by 'rb'. Using -Q turns regex syntax off and looks for the exact query*/
+$ ag .rb railties/CHANGELOG.md /*because of regex syntax, '.rb' searches for anything followed by 'rb'. Using -Q turns regex syntax off and looks for the exact query*/
+-l /*lists files containing the string*/
+-i /*switch the search to case insensitive mode*/
+-G /*option requesting for a search of files containing the argument that follows -G*/
