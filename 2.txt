@@ -12,4 +12,6 @@ $ ag .rb railties/CHANGELOG.md /*because of regex syntax, '.rb' searches for any
 -i /*switch the search to case insensitive mode*/
 -G /*option requesting for a search of files containing the argument that follows -G, supports regular expressions*/
 $ ag readme -li -G ec$ /*files ending in 'ec'*/
---ignore-dir /*pass a directory, or a file, to be ignored as argument*/
+--ignore-dir /*pass a directory, or a file,  to be ignored as argument, for two directories to ignore, pass the option twice*/
+
+ag only: reads vcs files and beahaves accordingly. If a path is in gitignore, ag ignores it.
