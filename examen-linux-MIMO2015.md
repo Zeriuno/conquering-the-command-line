@@ -11,7 +11,7 @@ En général cela devrait marcher:
 
 Si tu n'arrives pas à récupérer le fichier demandé, prend un fichier au hasard.
 
-1. Combien de lignes possède le fichier passwd.ibm1 ?
+1) Combien de lignes possède le fichier passwd.ibm1 ?
 
 Je te laisse trouver ce que doit aller à la place de `option`
 
@@ -42,14 +42,14 @@ Lis le manuel et trouve la bonne option (tape `q` pour quitter le manuel).
 Il est intéressant de remarquer par contre que l'option n'est pas nécessaire: elle permet juste d'avoir plus de clarté dans le résultat. Qu'est-ce qui se passe avec simplement `$ cat passwd | wc` ?
 
 
-2. Quel est le dernier login par ordre alphabétique croissant du fichier `passwd.ibm1` ?
+2) Quel est le dernier login par ordre alphabétique croissant du fichier `passwd.ibm1` ?
 
 Regarde ce que fait la commande `sort`.
 
-3. Combien de logins commencent par la lettre `j` ?
-4. Lors de la création des utilisateurs une erreur a eu lieu. Le homedir de certains users a été positionné à `/home/p6chiM` alors qu’il aurait dû l’être à `/home/p6chim`. Que proposez vous pour changer cela ?
-5. Combien de changements devez vous faire ?
-6. Je tape la commande suivante
+3) Combien de logins commencent par la lettre `j` ?
+4) Lors de la création des utilisateurs une erreur a eu lieu. Le homedir de certains users a été positionné à `/home/p6chiM` alors qu’il aurait dû l’être à `/home/p6chim`. Que proposez vous pour changer cela ?
+5) Combien de changements devez vous faire ?
+6) Je tape la commande suivante
 ```
 [mimo1@srv-mimo ~]$ id
 uid=501(mimo1) gid=501(mimo1) groupes=501(mimo1)
@@ -74,7 +74,7 @@ Expliquez la raison du message renvoyée par la commande `ls`
 d) Indiquez les étapes qu’il faudrait faire pour me permettre d’accéder au contenu de ce
 répertoire.
 
-7. Je tape la commande suivante
+7) Je tape la commande suivante
 ```
 [mimo1@srv-mimo ~]$ df
 Filesystem
@@ -85,7 +85,7 @@ Available Use% Mounted on
 a) Quelle est la taille en GigaOctets de la partition `/` ?
 b) Combien reste-t-il d’espace ?
 
-8. J’utilise la commande suivante `tree -L 3 -F /var/www | grep /`
+8) J’utilise la commande suivante `tree -L 3 -F /var/www | grep /`
 Voici le résultat.
 ```
 [root@srv-mimo ~]# tree -L 3 -F /var/www | grep /
@@ -122,16 +122,16 @@ Indiquez 2 commandes différentes permettant de me déplacer pour aller dans le
 répertoire `small`.
 c) Donner 2 commandes pour retourner dans mon homedir
 
-9. Dans le répertoire /var/www/icons/ en utilisant la commande ls -ail je trouve ce résultat
+99 Dans le répertoire /var/www/icons/ en utilisant la commande ls -ail je trouve ce résultat
 
-~~10. J’ai besoin d’exécuter un programme fait en langage C et compilé.
+~~10) J’ai besoin d’exécuter un programme fait en langage C et compilé.
 Je dois donner des droits d’administrateur (root) uniquement durant l’exécution.
 a) Que proposeriez vous ?
 b) Donnez un exemple au niveau du système linux d’un fonctionnement identique.~~
 
-11. Je désire ajouter une ligne à la fin d’un fichier nommé `fichier_sensible` qui en comporte déjà 10.
+11) Je désire ajouter une ligne à la fin d’un fichier nommé `fichier_sensible` qui en comporte déjà 10.
 On me dit de tapez la commande suivante : `echo "ligne que j’ajoute" > fichier_sensible`. Qu’en pensez vous ? **Justifiez votre réponse**.
-12. Voici la commande que je tape après m’être connecté directement au serveur en tant que `root`
+12) Voici la commande que je tape après m’être connecté directement au serveur en tant que `root`
 ```
 root@srv-mimo ~]# ps -ef | grep ssh
 root
@@ -176,5 +176,3 @@ total 40
 ```
 a) Que devez vous modifier pour que ces pages soient accessibles via le web, avec
 quelle syntaxe de commande ? **Justifiez brièvement**.
-14. d
-15. 
