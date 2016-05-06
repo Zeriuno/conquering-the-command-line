@@ -92,7 +92,12 @@ Confronte les permissions sur le dossier `ls -ail /var/log/audit/` et l'utilisat
 d) Indiquez les étapes qu’il faudrait faire pour me permettre d’accéder au contenu de ce
 répertoire.
 
+Pour agir comme appartenant au groupe `root` il faut y être. Cela peut durer juste le temps de lancer la commande.
+Cela peut être obtenu en précédant la commande `ls -ail /var/log/audit/` de la commande `sudo`.
 
+**Je vais plus loin**
+Pour que cela soit efficace, il faudra que le fichier `/etc/sudoers` permette cette opération.
+Selon la situation particulière de la machine, il pourra être nécessaire de fournir le mot de passe de l'utilisateur.
 
 7) Je tape la commande suivante
 ```
