@@ -53,7 +53,14 @@ Ce qu'il te faut c'est de chercher le pattern (motif) "ce qui commence par s" da
 * Pattern: utilise `^` pour dire "ce qui commence"
 
 4) Lors de la création des utilisateurs une erreur a eu lieu. Le homedir de certains users a été positionné à `/home/p6chiM` alors qu’il aurait dû l’être à `/home/p6chim`. Que proposez vous pour changer cela ?
+
+Plutôt que de traiter une multiplicité de comptes utilisateurs, autant agir directement sur les dossiers.
+Si `/home/p6chiM` n'est pas un dossier qui sert à d'autres utilisateurs, autant le transformer en un lien qui pointe vers `/home/p6chim`.
+
 5) Combien de changements devez vous faire ?
+
+Un seul.
+
 6) Je tape la commande suivante
 ```
 [mimo1@srv-mimo ~]$ id
@@ -63,7 +70,11 @@ uid=501(mimo1) gid=501(mimo1) groupes=501(mimo1)
 a) Lorsque j’ai tapé cette commande dans quel répertoire étais-je sachant que tout les
 comptes mimo se situent dans `/home` ? **Justifiez**.
 
+Déchiffre le prompt (ce qui se trouve à la gauche du `$`).
+
 b) Que me renvoie la commande indiquée (précisez pour chaque élément fournit)?
+
+
 
 c) Je tape la commande suivante
 ```
@@ -76,8 +87,12 @@ En regardant les droits sur le répertoire j’ai ceci
 ```
 Expliquez la raison du message renvoyée par la commande `ls`
 
+Confronte les permissions sur le dossier `ls -ail /var/log/audit/` et l'utilisateur `mimo1`.
+
 d) Indiquez les étapes qu’il faudrait faire pour me permettre d’accéder au contenu de ce
 répertoire.
+
+
 
 7) Je tape la commande suivante
 ```
