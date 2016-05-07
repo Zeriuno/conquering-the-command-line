@@ -47,6 +47,11 @@ Il est intéressant de remarquer par contre que l'option n'est pas nécessaire: 
 Regarde ce que fait la commande `sort`.
 
 3) Combien de logins commencent par la lettre `j` ?
+
+Ce qu'il te faut c'est de chercher le pattern (motif) "ce qui commence par s" dans le fichier.
+* Commande: regarde le manuel de la commande `grep`.
+* Pattern: utilise `^` pour dire "ce qui commence"
+
 4) Lors de la création des utilisateurs une erreur a eu lieu. Le homedir de certains users a été positionné à `/home/p6chiM` alors qu’il aurait dû l’être à `/home/p6chim`. Que proposez vous pour changer cela ?
 5) Combien de changements devez vous faire ?
 6) Je tape la commande suivante
