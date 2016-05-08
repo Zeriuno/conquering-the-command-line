@@ -71,6 +71,12 @@ a) Lorsque j’ai tapé cette commande dans quel répertoire étais-je sachant q
 comptes mimo se situent dans `/home` ? **Justifiez**.
 
 Déchiffre le prompt (ce qui se trouve à la gauche du `$`).
+`mimo1@srv-mimo ~` se décompose en trois parties:
+
+* `mimo1`:
+* `srv-mimo`:
+* `~`:
+
 
 b) Que me renvoie la commande indiquée (précisez pour chaque élément fournit)?
 
