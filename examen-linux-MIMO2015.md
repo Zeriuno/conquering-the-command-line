@@ -188,6 +188,16 @@ En dehors de ça on peut toujours donner le parcours absolu.
 
 9) Dans le répertoire /var/www/icons/ en utilisant la commande ls -ail je trouve ce résultat
 
+```
+392721 lrwxrwxrwx. 1 root root 40 12 mars 08:59 poweredby.png -> -
+../../../usr/share/pixmaps/poweredby.png
+```
+a) Que signifie ce résultat ?
+
+Quand tu regardes poweredby.png tu es *renvoyé vers* un autre fichier. Cela veut dire que le premier est...
+
+b) Où se situe le fichier définit par la syntaxe `../../../usr/share/pixmaps/poweredby.png` dans l’arborescence en notation absolue ?
+
 ~~10) J’ai besoin d’exécuter un programme fait en langage C et compilé.
 Je dois donner des droits d’administrateur (root) uniquement durant l’exécution.
 a) Que proposeriez vous ?
@@ -195,37 +205,67 @@ b) Donnez un exemple au niveau du système linux d’un fonctionnement identique
 
 11) Je désire ajouter une ligne à la fin d’un fichier nommé `fichier_sensible` qui en comporte déjà 10.
 On me dit de tapez la commande suivante : `echo "ligne que j’ajoute" > fichier_sensible`. Qu’en pensez vous ? **Justifiez votre réponse**.
+
+Teste:
+```
+$ echo "Hello" > question11
+```
+Maintenant regarde le résultat:
+```
+$ cat question11
+```
+Maintenant ajoute ça:
+```
+$ echo "Goodbye" > question11
+```
+Et contrôle à nouveau.
+Qu'est-ce qui s'est passé?
+
+Refait la même chose, mais maintenant le deuxième ajout fais-le ainsi:
+```
+$ echo "Goodbye" >> question11
+```
+Qu'est-ce qui s'est passé?
+
 12) Voici la commande que je tape après m’être connecté directement au serveur en tant que `root`
 ```
 root@srv-mimo ~]# ps -ef | grep ssh
-root
-1743 1 0 11:03 ?
-00:00:00 /usr/sbin/sshd
-root
-2068 1743 0 11:03 ?
-00:00:00 sshd: mimo1 [priv]
-mimo1 2072 2068 0 11:04 ?
-00:00:00 sshd: mimo1@pts/0
-root
-2930 2243 0 13:41 pts/0 00:00:00 grep ssh
+root  1743    1 0 11:03 ? 00:00:00 /usr/sbin/sshd
+root  2068 1743 0 11:03 ? 00:00:00 sshd: mimo1 [priv]
+mimo1 2072 2068 0 11:04 ? 00:00:00 sshd: mimo1@pts/0
+root  2930 2243 0 13:41 pts/0 00:00:00 grep ssh
 ```
 a) Donnez la commande permettant de supprimer le processus concernant le
 programme `/usr/sbin/sshd`
+
+Afin de cmprendre à quoi correspondent les différents éléments retournés, tape:
+```
+$ ps -ef |less
+```
+et regarde les en-têtes sur la première ligne (`q` pour quitter).
+Pour supprimer un processus on utilise la commande `kill`, accompagnée d'une option et de l'identifiant du processus que l'on veut tuer. Avec l'option `-9` on fait le choix le plus brutal. Rien ne survit à `kill -9`.
+
 b) Quelle sera la conséquence de cette commande ?
+
+`sshd` est le démon de `ssh`. Si on tue `sshd`, on tue `ssh`.
+
+Qu'est-ce `ssh`? `ssh` est `secure shell`, un programme qui te permettre d'ouvrir une session sur un ordinateur distant.
+
 c) Si je détruis le processus concernant le programme `sshd: mimo1@pts/0` que se passe-t-il ?
+
+Pas de programme pour me connecter à l'ordinateur distant, pas de connexion. Pas de connexio... pas de connexion!
+
 d) Dans le cas où je me suis d’abord connecté en user `mimo1` puis depuis ce compte en `root` que se passe-t-il ?
-13. Je réalise en tant qu’utilisateur mimo1 des pages web dans mon
-homedirectory dans le répertoire `WWW`.
+
+Cette subtilité m'échappe.
+
+13. Je réalise en tant qu’utilisateur mimo1 des pages web dans mon homedirectory dans le répertoire `WWW`.
 Voici les informations dont je dispose :
 ```
 [root@srv-mimo ~]# ps -ef | grep httpd
-root
-3141 1 2 14:21 ?
-00:00:00 /usr/sbin/httpd
-apache 3143 3141 0 14:21 ?
-00:00:00 /usr/sbin/httpd
-apache 3144 3141 0 14:21 ?
-00:00:00 /usr/sbin/httpd
+root   3141    1 2 14:21 ? 00:00:00 /usr/sbin/httpd
+apache 3143 3141 0 14:21 ? 00:00:00 /usr/sbin/httpd
+apache 3144 3141 0 14:21 ? 00:00:00 /usr/sbin/httpd
 [root@srv-mimo ~]# id mimo1
 uid=501(mimo1) gid=501(mimo1) groupes=501(mimo1)
 [root@srv-mimo ~]# id apache
@@ -240,3 +280,9 @@ total 40
 ```
 a) Que devez vous modifier pour que ces pages soient accessibles via le web, avec
 quelle syntaxe de commande ? **Justifiez brièvement**.
+
+Les pages web sont dans `WWW`.
+Le programme qui le sert à un visiteur internet est `apache`.
+Pourqu'il puisse les lire, il lui faut les droits. Il a besoin de lire et exécuter.
+
+Un des cas d'utilisation de la commande `adduser` permet de faire ce que nous voulons.
