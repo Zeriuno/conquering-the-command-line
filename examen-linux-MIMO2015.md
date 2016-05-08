@@ -105,6 +105,11 @@ Cela peut être obtenu en précédant la commande `ls -ail /var/log/audit/` de l
 Pour que cela soit efficace, il faudra que le fichier `/etc/sudoers` permette cette opération.
 Selon la situation particulière de la machine, il pourra être nécessaire de fournir le mot de passe de l'utilisateur.
 
+Si on veut accomplir plusieurs actions qui nécessitent des droits de `root`, afin de ne pas prémettre `sudo` à chaque commande, il vaut mieux ouvrire une shell de `root`. Parmi les différentes méthodes que l'on peut choisir pour ce faire, celle optimale est
+```
+$ sudo -i
+```
+
 7) Je tape la commande suivante
 ```
 [mimo1@srv-mimo ~]$ df
