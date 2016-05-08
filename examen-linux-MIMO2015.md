@@ -113,12 +113,15 @@ $ sudo -i
 7) Je tape la commande suivante
 ```
 [mimo1@srv-mimo ~]$ df
-Filesystem
-1K-blocks Used
-Available Use% Mounted on
+Filesystem             1K-blocks        Used    Available Use% Mounted on
 /dev/mapper/vg_srvmimo-lv_root 27359100 5480684 20488644 22% /
 ```
 a) Quelle est la taille en GigaOctets de la partition `/` ?
+
+kO -> MO -> GO
+
+Le facteur entre chacun des ordres de grandeur est...?
+
 b) Combien reste-t-il d’espace ?
 
 8) J’utilise la commande suivante `tree -L 3 -F /var/www | grep /`
@@ -153,12 +156,37 @@ Voici le résultat.
 └── usage/
 ```
 a) Que fait la commande tapée ?
+
+`tree` -> arbre...
+
+Pour comprendre la signification des options, `man tree`.
+
+La commande est ensuite passée, via un `pipe`, à `grep`, afin de retourner...
+
 b) Je suis maintenant positionné dans le répertoire `xsl`.
 Indiquez 2 commandes différentes permettant de me déplacer pour aller dans le
 répertoire `small`.
+
+La commande nécessaire est `cd` (`change directory`).
+
+On peut y aller avec un parcours rélatif (on utilisera donc les indicateurs de position `.` -ici- et `..` -dossier supérieur).
+
+On peut également y aller avec un parcours absolu, en indiquant donc le parcours complet depuis `/`
+
 c) Donner 2 commandes pour retourner dans mon homedir
 
-99 Dans le répertoire /var/www/icons/ en utilisant la commande ls -ail je trouve ce résultat
+Il existe deux raccourcis pour se déplacer dans son `home directory`, indépendemment de où l'on est:
+```
+$ cd ~
+```
+```
+$ cd
+```
+*Attention*: ne confond pas le prompt `$` avec la commande.
+
+En dehors de ça on peut toujours donner le parcours absolu.
+
+9) Dans le répertoire /var/www/icons/ en utilisant la commande ls -ail je trouve ce résultat
 
 ~~10) J’ai besoin d’exécuter un programme fait en langage C et compilé.
 Je dois donner des droits d’administrateur (root) uniquement durant l’exécution.
