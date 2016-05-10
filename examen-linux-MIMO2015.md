@@ -238,7 +238,7 @@ root  2930 2243 0 13:41 pts/0 00:00:00 grep ssh
 a) Donnez la commande permettant de supprimer le processus concernant le
 programme `/usr/sbin/sshd`
 
-Afin de cmprendre à quoi correspondent les différents éléments retournés, tape:
+Afin de comprendre à quoi correspondent les différents éléments retournés, tape:
 ```
 $ ps -ef |less
 ```
