@@ -54,8 +54,8 @@ Ce qu'il te faut c'est de chercher le pattern (motif) "ce qui commence par s" da
 
 4) Lors de la création des utilisateurs une erreur a eu lieu. Le homedir de certains users a été positionné à `/home/p6chiM` alors qu’il aurait dû l’être à `/home/p6chim`. Que proposez vous pour changer cela ?
 
-~Plutôt que de traiter une multiplicité de comptes utilisateurs, autant agir directement sur les dossiers.
-Si `/home/p6chiM` n'est pas un dossier qui sert à d'autres utilisateurs, autant le transformer en un lien qui pointe vers `/home/p6chim`.~
+~~Plutôt que de traiter une multiplicité de comptes utilisateurs, autant agir directement sur les dossiers.
+Si `/home/p6chiM` n'est pas un dossier qui sert à d'autres utilisateurs, autant le transformer en un lien qui pointe vers `/home/p6chim`.~~
 ```
 sed "s/p6chiM//p6chim/g" > passwd.ibm1.new
 ```
