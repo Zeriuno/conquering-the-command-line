@@ -162,9 +162,9 @@ a) Que fait la commande tapée ?
 
 `tree` -> arbre...
 
-Pour comprendre la signification des options, `man tree`.
+Pour comprendre la signification des options, `man tree` (ou sinon `-L` = `level` et `-F` = `folder`, c'est-à-dire signaler les dossiers en mettant un `/` à la fin, ce qui permet…
 
-La commande est ensuite passée, via un `pipe`, à `grep`, afin de retourner...
+La commande est ensuite passée, via un `pipe`, à `grep`, afin de filtrer l'affichage et retourner uniquement...
 
 b) Je suis maintenant positionné dans le répertoire `xsl`.
 Indiquez 2 commandes différentes permettant de me déplacer pour aller dans le
@@ -187,7 +187,7 @@ $ cd
 ```
 *Attention*: ne confond pas le prompt `$` avec la commande.
 
-En dehors de ça on peut toujours donner le parcours absolu.
+En dehors de ça on peut toujours donner les parcours absolu et rélatif.
 
 9) Dans le répertoire /var/www/icons/ en utilisant la commande ls -ail je trouve ce résultat
 
